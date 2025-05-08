@@ -1,0 +1,6 @@
+_build
+builddir
+**/__pycache__/
+.flatpak-builder/
+flatpak/
+ignore

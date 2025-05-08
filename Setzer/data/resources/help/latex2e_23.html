@@ -1,0 +1,1125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- This document is an unofficial reference manual for LaTeX, a
+document preparation system, version of October 2018.
+
+This manual was originally translated from LATEX.HLP v1.0a in the
+VMS Help Library.  The pre-translation version was written by
+George D. Greenwade of Sam Houston State University.  The
+LaTeX 2.09 version was written by Stephen Gilmore.  The
+LaTeX2e version was adapted from this by Torsten Martinsen.  Karl
+Berry made further updates and additions, and gratefully acknowledges
+using Hypertext Help with LaTeX, by Sheldon Green, and
+LaTeX Command Summary (for LaTeX 2.09) by
+L. Botway and C. Biemesderfer (published by the TeX Users
+Group as TeXniques number 10), as reference material.  We also
+gratefully acknowledge additional material appearing in
+latex2e-reference by Martin Herbert Dietze.  (From these references no
+text was directly copied.)
+
+Copyright 2007, 2008, 2009, 2010, 2011, 2012, 2013,
+2014, 2015, 2016, 2017, 2018 Karl Berry.
+
+Copyright 1988, 1994, 2007 Stephen Gilmore.
+
+Copyright 1994, 1995, 1996 Torsten Martinsen.
+
+Permission is granted to make and distribute verbatim copies of
+this manual provided the copyright notice and this permission notice
+are preserved on all copies.
+
+
+Permission is granted to copy and distribute modified versions of this
+manual under the conditions for verbatim copying, provided that the entire
+resulting derived work is distributed under the terms of a permission
+notice identical to this one.
+
+Permission is granted to copy and distribute translations of this manual
+into another language, under the above conditions for modified versions. -->
+<!-- Created by GNU Texinfo 6.5, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Special insertions (LaTeX2e unofficial reference manual (October 2018))</title>
+
+<meta name="description" content="Special insertions (LaTeX2e unofficial reference manual (October 2018))">
+<meta name="keywords" content="Special insertions (LaTeX2e unofficial reference manual (October 2018))">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<link href="latex2e_0.html#Top" rel="start" title="Top">
+<link href="latex2e_30.html#Index" rel="index" title="Index">
+<link href="latex2e_0.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="latex2e_0.html#Top" rel="up" title="Top">
+<link href="latex2e_24.html#Splitting-the-input" rel="next" title="Splitting the input">
+<link href="latex2e_22.html#g_t_005cresizebox" rel="prev" title="\resizebox">
+<style type="text/css">
+<!--
+body {margin: 1em; margin-top: 0px; padding-top: 1px}
+a.anchor {float: right}
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+blockquote.smallindentedblock {margin-right: 0em; font-size: smaller}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body id="top" lang="en">
+<a name="Special-insertions" class="anchor"></a>
+<a name="Special-insertions-1" class="anchor"></a>
+<h2 class="chapter">Special insertions</h2>
+
+<a name="index-special-insertions" class="anchor"></a>
+<a name="index-insertions-of-special-characters" class="anchor"></a>
+
+<p>LaTeX provides commands for inserting characters that have a
+special meaning do not correspond to simple characters you can type.
+</p>
+
+
+<hr>
+<a name="Reserved-characters" class="anchor"></a>
+<a name="Reserved-characters-1" class="anchor"></a>
+<h3 class="section">Reserved characters</h3>
+
+<a name="index-reserved-characters" class="anchor"></a>
+<a name="index-characters_002c-reserved" class="anchor"></a>
+<a name="index-special-characters" class="anchor"></a>
+<a name="index-characters_002c-special" class="anchor"></a>
+<p>LaTeX sets aside the following characters for special purposes. For
+example, the percent sign&nbsp;<code>%</code> is for comments.  They are
+called <em>reserved characters</em> or <em>special characters</em>.
+</p>
+<div class="example">
+<pre class="example"># $ % &amp; { } _ ~ ^ \ 
+</pre></div>
+
+<a name="index-_005c_0023" class="anchor"></a>
+<a name="index-_005c_0024" class="anchor"></a>
+<a name="index-_005c_0025" class="anchor"></a>
+<a name="index-_005c_0026" class="anchor"></a>
+<a name="index-_005c_005f" class="anchor"></a>
+<a name="index-_005c_007b" class="anchor"></a>
+<a name="index-_005c_007d" class="anchor"></a>
+<p>If you want a reserved character to be printed as itself, in the text
+body font, for all but the final three characters in that list simply
+put a backslash&nbsp;<code>\</code> in front of the character.  Thus,
+typing <code>\$1.23</code> will produce&nbsp;<code>$1.23</code> in your output.
+</p>
+<a name="index-_005c_007e" class="anchor"></a>
+<a name="index-_005c_005e" class="anchor"></a>
+<a name="index-_005ctextbackslash" class="anchor"></a>
+<p>As to the last three characters, to get a tilde in the text body font
+use <code>\~{}</code> (omitting the curly braces would result in the next
+character receiving a tilde accent).  Similarly, to get a get a text
+body font circumflex use <code>\^{}</code>.  To get a backslash in the font
+of the text body, enter <code>\textbackslash{}</code>.
+</p>
+<p>To produce the reserved characters in a typewriter font use
+<code>\verb!!</code> as below (the double backslash&nbsp;<code>\\</code> is only
+there to split the lines).
+</p>
+<div class="example">
+<pre class="example">\begin{center}
+  \# \$ \% \&amp; \{ \} \_ \~{} \^{} \textbackslash \\
+  \verb!# $ % &amp; { } _ ~ ^ \!
+\end{center}
+</pre></div>
+
+
+<hr>
+<a name="Upper-and-lower-case" class="anchor"></a>
+<a name="Upper-and-lower-case-1" class="anchor"></a>
+<h3 class="section">Upper and lower case</h3>
+
+<a name="index-uppercase" class="anchor"></a>
+<a name="index-lowercase" class="anchor"></a>
+<a name="index-characters_002c-case-of" class="anchor"></a>
+
+<p>Synopsis:
+</p>
+<div class="example">
+<pre class="example">\uppercase{<var>text</var>}
+\lowercase{<var>text</var>}
+\MakeUppercase{<var>text</var>}
+\MakeLowercase{<var>text</var>}
+</pre></div>
+
+<p>Change the case of characters.  The TeX primitives commands
+<code>\uppercase</code> and <code>\lowercase</code> only work for American
+characters. The LaTeX commands <code>\MakeUppercase</code> and
+<code>\MakeLowercase</code> commands also change characters accessed by
+commands such as <code>\ae</code> or <code>\aa</code>.  The commands
+<code>\MakeUppercase</code> and <code>\MakeLowercase</code> are robust but they have
+moving arguments (see <a href="latex2e_12.html#g_t_005cprotect">\protect</a>).
+</p>
+<p>These commands do not change the case of letters used in the name of a
+command within <var>text</var>.  But they do change the case of every other
+Latin letter inside the argument <var>text</var>.  Thus,
+<code>\MakeUppercase{Let $y=f(x)$</code>} produces &lsquo;<samp>LET Y=F(X)</samp>&rsquo;.  Another
+example is that the name of an environment will be changed, so that
+<code>\MakeUppercase{\begin{tabular} ... \end{tabular}}</code> will
+produce an error because the first half is changed to
+<code>\begin{TABULAR}</code>.
+</p>
+<p>LaTeX uses the same fixed table for changing case throughout a
+document, The table used is designed for the font encoding T1; this
+works well with the standard TeX fonts for all Latin alphabets but
+will cause problems when using other alphabets.
+</p>
+<p>To change the case of text that results from a macro inside <var>text</var>
+you need to do expansion.  Here the <code>\Schoolname</code> produces
+&lsquo;<samp>COLLEGE OF MATHEMATICS</samp>&rsquo;.
+</p>
+<div class="example">
+<pre class="example">\newcommand{\schoolname}{College of Mathematics}
+\newcommand{\Schoolname}{\expandafter\MakeUppercase
+                           <!-- /@w -->\expandafter{\schoolname}}
+</pre></div>
+
+<a name="index-package_002c-textcase" class="anchor"></a>
+<a name="index-textcase-package" class="anchor"></a>
+
+<p>The <samp>textcase</samp> package brings some of the missing feature of the
+standard LaTeX commands <code>\MakeUppercase</code> and
+<code>\MakeLowerCase</code>.
+</p>
+<a name="index-package_002c-mfirstuc" class="anchor"></a>
+<a name="index-mfirstuc-package" class="anchor"></a>
+ 
+<p>To uppercase only the first letter of words, you can use the package
+<samp>mfirstuc</samp>.
+</p>
+
+<hr>
+<a name="Symbols-by-font-position" class="anchor"></a>
+<a name="Symbols-by-font-position-1" class="anchor"></a>
+<h3 class="section">Symbols by font position</h3>
+
+<a name="index-_005csymbol" class="anchor"></a>
+<a name="index-accessing-any-character-of-a-font" class="anchor"></a>
+<a name="index-font-symbols_002c-by-number" class="anchor"></a>
+
+<p>You can access any character of the current font using its number with
+the <code>\symbol</code> command. For example, the visible space character
+used in the <code>\verb*</code> command has the code decimal 32, so it can be
+typed as <code>\symbol{32}</code>.
+</p>
+<p>You can also specify numbers in octal (base 8) by using a <code>'</code>
+prefix, or hexadecimal (base 16) with a <code>&quot;</code> prefix, so the previous
+example could also be written as <code>\symbol{'40}</code> or
+<code>\symbol{&quot;20}</code>.
+</p>
+
+<hr>
+<a name="Text-symbols" class="anchor"></a>
+<a name="Text-symbols-1" class="anchor"></a>
+<h3 class="section">Text symbols</h3>
+
+<a name="index-text-symbols" class="anchor"></a>
+<a name="index-symbols_002c-text" class="anchor"></a>
+
+<a name="index-textcomp-package-1" class="anchor"></a>
+<p>LaTeX provides commands to generate a number of non-letter symbols in
+running text.  Some of these, especially the more obscure ones, are not
+available in OT1. Unless you are using XeLaTeX or LuaLaTeX then
+you may need to load the <code>textcomp</code> package.
+</p>
+<dl compact="compact">
+<dt><code>\copyright</code>
+<a name="index-_005ccopyright" class="anchor"></a>
+</dt>
+<dt><code>\textcopyright</code>
+<a name="index-_005ctextcopyright" class="anchor"></a>
+</dt>
+<dd><a name="index-copyright-symbol" class="anchor"></a>
+<p>&copy; The copyright symbol.
+</p>
+</dd>
+<dt><code>\dag</code>
+<a name="index-_005cdag" class="anchor"></a>
+</dt>
+<dd><a name="index-dagger_002c-in-text" class="anchor"></a>
+<p>&#x2020; The dagger symbol (in text).
+</p>
+</dd>
+<dt><code>\ddag</code>
+<a name="index-_005cddag" class="anchor"></a>
+</dt>
+<dd><a name="index-double-dagger_002c-in-text" class="anchor"></a>
+<p>&#x2021; The double dagger symbol (in text).
+</p>
+</dd>
+<dt><code>\LaTeX</code>
+<a name="index-_005cLaTeX" class="anchor"></a>
+</dt>
+<dd><a name="index-LaTeX-logo" class="anchor"></a>
+<a name="index-logo_002c-LaTeX" class="anchor"></a>
+<p>The LaTeX logo.
+</p>
+</dd>
+<dt><code>\LaTeXe</code>
+<a name="index-_005cLaTeXe" class="anchor"></a>
+</dt>
+<dd><a name="index-LaTeX2e-logo" class="anchor"></a>
+<a name="index-logo_002c-LaTeX2e" class="anchor"></a>
+<p>The LaTeX2e logo.
+</p>
+</dd>
+<dt><code>\guillemotleft <span class="roman">(&laquo;)</span></code>
+<a name="index-_005cguillemotleft-_0028_00ab_0029" class="anchor"></a>
+</dt>
+<dt><code>\guillemotright <span class="roman">(&raquo;)</span></code>
+<a name="index-_005cguillemotright-_0028_00bb_0029" class="anchor"></a>
+</dt>
+<dt><code>\guilsinglleft <span class="roman">(&lsaquo;)</span></code>
+<a name="index-_005cguilsinglleft-_0028_2039_0029" class="anchor"></a>
+</dt>
+<dt><code>\guilsinglright <span class="roman">(&rsaquo;)</span></code>
+<a name="index-_005cguilsinglright-_0028_203a_0029" class="anchor"></a>
+</dt>
+<dd><a name="index-double-guillemets" class="anchor"></a>
+<a name="index-single-guillemets" class="anchor"></a>
+<a name="index-left-angle-quotation-marks" class="anchor"></a>
+<a name="index-right-angle-quotation-marks" class="anchor"></a>
+<a name="index-double-angle-quotation-marks" class="anchor"></a>
+<a name="index-single-angle-quotation-marks" class="anchor"></a>
+<a name="index-French-quotation-marks" class="anchor"></a>
+<a name="index-quotation-marks_002c-French" class="anchor"></a>
+<p>&laquo;, &raquo;, &lsaquo;, &rsaquo;
+Double and single angle quotation marks, commonly used in French.
+</p>
+</dd>
+<dt><code>\ldots</code>
+<a name="index-_005cldots-1" class="anchor"></a>
+</dt>
+<dt><code>\dots</code>
+<a name="index-_005cdots" class="anchor"></a>
+</dt>
+<dt><code>\textellipsis</code>
+<a name="index-_005ctextellipsis" class="anchor"></a>
+</dt>
+<dd><a name="index-ellipsis" class="anchor"></a>
+<p>&hellip;  An ellipsis (three dots at the baseline):  <code>\ldots</code>
+and <code>\dots</code> also work in math mode.
+</p>
+</dd>
+<dt><code>\lq</code>
+<a name="index-_005clq" class="anchor"></a>
+</dt>
+<dd><a name="index-left-quote" class="anchor"></a>
+<a name="index-opening-quote" class="anchor"></a>
+<p>&lsquo; Left (opening) quote.
+</p>
+</dd>
+<dt><code>\P</code>
+<a name="index-_005cP" class="anchor"></a>
+</dt>
+<dt><code>\textparagraph</code>
+<a name="index-_005ctextparagraph" class="anchor"></a>
+</dt>
+<dd><a name="index-paragraph-symbol" class="anchor"></a>
+<a name="index-pilcrow" class="anchor"></a>
+<p>&#x00B6; Paragraph sign (pilcrow).
+</p>
+</dd>
+<dt><code>\pounds</code>
+<a name="index-_005cpounds" class="anchor"></a>
+</dt>
+<dt><code>\textsterling</code>
+<a name="index-_005ctextsterling" class="anchor"></a>
+</dt>
+<dd><a name="index-pounds-symbol" class="anchor"></a>
+<a name="index-sterling-symbol" class="anchor"></a>
+<p>&pound; English pounds sterling.
+</p>
+</dd>
+<dt><code>\quotedblbase <span class="roman">(&bdquo;)</span></code>
+<a name="index-_005cquotedblbase-_0028_201e_0029" class="anchor"></a>
+</dt>
+<dt><code>\quotesinglbase <span class="roman">(&sbquo;)</span></code>
+<a name="index-_005cquotesinglbase-_0028_201a_0029" class="anchor"></a>
+</dt>
+<dd><a name="index-double-low_002d9-quotation-mark" class="anchor"></a>
+<a name="index-single-low_002d9-quotation-mark" class="anchor"></a>
+<a name="index-low_002d9-quotation-marks_002c-single-and-double" class="anchor"></a>
+<p>&bdquo; and &sbquo;
+Double and single quotation marks on the baseline.
+</p>
+</dd>
+<dt><code>\rq</code>
+<a name="index-_005crq" class="anchor"></a>
+</dt>
+<dd><a name="index-right-quote" class="anchor"></a>
+<a name="index-closing-quote" class="anchor"></a>
+<p>&rsquo; Right (closing) quote.
+</p>
+</dd>
+<dt><code>\S</code>
+<a name="index-_005cS" class="anchor"></a>
+</dt>
+<dt><code>\textsection</code>
+<a name="index-_005ctextsection" class="anchor"></a>
+</dt>
+<dd><a name="index-section-symbol" class="anchor"></a>
+<p>&#x00A7; Section sign.
+</p>
+</dd>
+<dt><code>\TeX</code>
+<a name="index-_005cTeX" class="anchor"></a>
+</dt>
+<dd><a name="index-TeX-logo" class="anchor"></a>
+<a name="index-logo_002c-TeX" class="anchor"></a>
+<p>The TeX logo.
+</p>
+</dd>
+<dt><code>\textasciicircum</code>
+<a name="index-_005ctextasciicircum" class="anchor"></a>
+</dt>
+<dd><a name="index-circumflex_002c-ASCII_002c-in-text" class="anchor"></a>
+<a name="index-ASCII-circumflex_002c-in-text" class="anchor"></a>
+<p>^ ASCII circumflex.
+</p>
+</dd>
+<dt><code>\textasciitilde</code>
+<a name="index-_005ctextasciitilde" class="anchor"></a>
+</dt>
+<dd><a name="index-tilde_002c-ASCII_002c-in-text" class="anchor"></a>
+<a name="index-ASCII-tilde_002c-in-text" class="anchor"></a>
+<p>~ ASCII tilde.
+</p>
+</dd>
+<dt><code>\textasteriskcentered</code>
+<a name="index-_005ctextasteriskcentered" class="anchor"></a>
+</dt>
+<dd><a name="index-asterisk_002c-centered_002c-in-text" class="anchor"></a>
+<a name="index-centered-asterisk_002c-in-text" class="anchor"></a>
+<p>* Centered asterisk.
+</p>
+</dd>
+<dt><code>\textbackslash</code>
+<a name="index-_005ctextbackslash-1" class="anchor"></a>
+</dt>
+<dd><a name="index-backslash_002c-in-text" class="anchor"></a>
+<p>\ Backslash.
+</p>
+</dd>
+<dt><code>\textbar</code>
+<a name="index-_005ctextbar" class="anchor"></a>
+</dt>
+<dd><a name="index-vertical-bar_002c-in-text" class="anchor"></a>
+<a name="index-bar_002c-vertical_002c-in-text" class="anchor"></a>
+<p>| Vertical bar.
+</p>
+</dd>
+<dt><code>\textbardbl</code>
+<a name="index-_005ctextbardbl" class="anchor"></a>
+</dt>
+<dd><a name="index-vertical-bar_002c-double_002c-in-text" class="anchor"></a>
+<a name="index-bar_002c-double-vertical_002c-in-text" class="anchor"></a>
+<a name="index-double-vertical-bar_002c-in-text" class="anchor"></a>
+<p>&#x23F8; Double vertical bar.
+</p>
+</dd>
+<dt><code>\textbigcircle</code>
+<a name="index-_005ctextbigcircle" class="anchor"></a>
+</dt>
+<dd><a name="index-big-circle-symbols_002c-in-text" class="anchor"></a>
+<a name="index-circle-symbol_002c-big_002c-in-text" class="anchor"></a>
+<p>&#x25EF; Big circle symbol.
+</p>
+</dd>
+<dt><code>\textbraceleft</code>
+<a name="index-_005ctextbraceleft" class="anchor"></a>
+</dt>
+<dd><a name="index-left-brace_002c-in-text" class="anchor"></a>
+<a name="index-brace_002c-left_002c-in-text" class="anchor"></a>
+<p>{ Left brace.
+</p>
+</dd>
+<dt><code>\textbraceright</code>
+<a name="index-_005ctextbraceright" class="anchor"></a>
+</dt>
+<dd><a name="index-right-brace_002c-in-text" class="anchor"></a>
+<a name="index-brace_002c-right_002c-in-text" class="anchor"></a>
+<p>} Right brace.
+</p>
+</dd>
+<dt><code>\textbullet</code>
+<a name="index-_005ctextbullet" class="anchor"></a>
+</dt>
+<dd><a name="index-bullet_002c-in-text" class="anchor"></a>
+<p>&bull; Bullet.
+</p>
+</dd>
+<dt><code>\textcircled{<var>letter</var>}</code>
+<a name="index-_005ctextcircled_007bletter_007d" class="anchor"></a>
+</dt>
+<dd><a name="index-circled-letter_002c-in-text" class="anchor"></a>
+<p>&#x24B6; Circle around <var>letter</var>.
+</p>
+</dd>
+<dt><code>\textcompwordmark</code>
+<a name="index-_005ctextcompwordmark" class="anchor"></a>
+</dt>
+<dt><code>\textcapitalcompwordmark</code>
+<a name="index-_005ctextcapitalcompwordmark" class="anchor"></a>
+</dt>
+<dt><code>\textascendercompwordmark</code>
+<a name="index-_005ctextascendercompwordmark" class="anchor"></a>
+</dt>
+<dd><a name="index-composite-word-mark_002c-in-text" class="anchor"></a>
+<a name="index-cap-height" class="anchor"></a>
+<a name="index-ascender-height" class="anchor"></a>
+<p>Used to separate letters that would normally ligature. For example,
+<code>f\textcompwordmark i</code> produces &lsquo;<samp>fi</samp>&rsquo; without a ligature. This
+is most useful in non-English languages.  The
+<code>\textcapitalcompwordmark</code> form has the cap height of the font
+while the <code>\textascendercompwordmark</code> form has the ascender height.
+</p>
+</dd>
+<dt><code>\textdagger</code>
+<a name="index-_005ctextdagger" class="anchor"></a>
+</dt>
+<dd><a name="index-dagger_002c-in-text-1" class="anchor"></a>
+<p>&#x2020; Dagger.
+</p>
+</dd>
+<dt><code>\textdaggerdbl</code>
+<a name="index-_005ctextdaggerdbl" class="anchor"></a>
+</dt>
+<dd><a name="index-dagger_002c-double_002c-in-text" class="anchor"></a>
+<a name="index-double-dagger_002c-in-text-1" class="anchor"></a>
+<p>&#x2021; Double dagger.
+</p>
+</dd>
+<dt><code>\textdollar <span class="roman">(or <code>\$</code>)</span></code>
+<a name="index-_005ctextdollar-_0028or-_005c_0024_0029" class="anchor"></a>
+</dt>
+<dd><a name="index-dollar-sign" class="anchor"></a>
+<a name="index-currency_002c-dollar" class="anchor"></a>
+<p>$ Dollar sign.
+</p>
+</dd>
+<dt><code>\textemdash <span class="roman">(or <code>---</code>)</span></code>
+<a name="index-_005ctextemdash-_0028or-_002d_002d_002d_0029" class="anchor"></a>
+</dt>
+<dd><a name="index-em_002ddash" class="anchor"></a>
+<p>&mdash; Em-dash (used for punctuation, as in
+<code>The playoffs --- if you are fortunate enough to make the playoffs ---
+is more like a sprint.</code>).
+</p>
+</dd>
+<dt><code>\textendash <span class="roman">(or <code>--</code>)</span></code>
+<a name="index-_005ctextendash-_0028or-_002d_002d_0029" class="anchor"></a>
+</dt>
+<dd><a name="index-e_002ddash" class="anchor"></a>
+<p>&ndash; En-dash (used for ranges, as in <code>See pages 12--14</code>).
+</p>
+</dd>
+<dt><code>\texteuro</code>
+<a name="index-_005ctexteuro" class="anchor"></a>
+</dt>
+<dd><a name="index-euro-symbol" class="anchor"></a>
+<a name="index-currency_002c-euro" class="anchor"></a>
+<a name="index-package_002c-eurosym" class="anchor"></a>
+<a name="index-eurosym-package" class="anchor"></a>
+
+<p>The Euro symbol: &euro;. For an alternative glyph design, try the
+<samp>eurosym</samp> package; also, most fonts nowadays come with their own
+Euro symbol (Unicode U+20AC).
+</p>
+</dd>
+<dt><code>\textexclamdown <span class="roman">(or <code>!`</code>)</span></code>
+<a name="index-_005ctextexclamdown-_0028or-_0021_0060_0029" class="anchor"></a>
+</dt>
+<dd><a name="index-exclamation-point_002c-upside_002ddown" class="anchor"></a>
+<p>&iexcl; Upside down exclamation point.
+</p>
+</dd>
+<dt><code>\textgreater</code>
+<a name="index-_005ctextgreater" class="anchor"></a>
+</dt>
+<dd><a name="index-greater-than-symbol_002c-in-text" class="anchor"></a>
+<p>&gt; Greater than symbol.
+</p>
+</dd>
+<dt><code>\textless</code>
+<a name="index-_005ctextless" class="anchor"></a>
+</dt>
+<dd><a name="index-less-than-symbol_002c-in-text" class="anchor"></a>
+<p>&lt; Less than symbol.
+</p>
+</dd>
+<dt><code>\textleftarrow</code>
+<a name="index-_005ctextleftarrow" class="anchor"></a>
+</dt>
+<dd><a name="index-arrow_002c-left_002c-in-text" class="anchor"></a>
+<a name="index-left-arrow_002c-in-text" class="anchor"></a>
+<p>&#x2190; Left arrow.   
+</p>
+</dd>
+<dt><code>\textordfeminine</code>
+<a name="index-_005ctextordfeminine" class="anchor"></a>
+</dt>
+<dt><code>\textordmasculine</code>
+<a name="index-_005ctextordmasculine" class="anchor"></a>
+</dt>
+<dd><a name="index-feminine-ordinal-symbol" class="anchor"></a>
+<a name="index-masculine-ordinal-symbol" class="anchor"></a>
+<a name="index-ordinals_002c-feminine-and-masculine" class="anchor"></a>
+<a name="index-Spanish-ordinals_002c-feminine-and-masculine" class="anchor"></a>
+<p>&ordf;, &ordm; Feminine and masculine ordinal symbols.
+</p>
+</dd>
+<dt><code>\textperiodcentered</code>
+<a name="index-_005ctextperiodcentered" class="anchor"></a>
+</dt>
+<dd><a name="index-period_002c-centered_002c-in-text" class="anchor"></a>
+<a name="index-centered-period_002c-in-text" class="anchor"></a>
+<p>&#x00B7; Centered period.
+</p>
+</dd>
+<dt><code>\textquestiondown <span class="roman">(or <code>?`</code>)</span></code>
+<a name="index-_005ctextquestiondown-_0028or-_003f_0060_0029" class="anchor"></a>
+</dt>
+<dd><a name="index-question-mark_002c-upside_002ddown" class="anchor"></a>
+<p>&iquest; Upside down question mark.
+</p>
+</dd>
+<dt><code>\textquotedblleft <span class="roman">(or <code>``</code>)</span></code>
+<a name="index-_005ctextquotedblleft-_0028or-_0060_0060_0029" class="anchor"></a>
+</dt>
+<dd><a name="index-left-quote_002c-double" class="anchor"></a>
+<a name="index-double-left-quote" class="anchor"></a>
+<p>&ldquo; Double left quote.
+</p>
+</dd>
+<dt><code>\textquotedblright <span class="roman">(or <code>''</code>)</span></code>
+<a name="index-_005ctextquotedblright-_0028or-_0027_0027_0029" class="anchor"></a>
+</dt>
+<dd><a name="index-right-quote_002c-double" class="anchor"></a>
+<a name="index-double-right-quote" class="anchor"></a>
+<p>&rdquo; Double right quote.
+</p>
+</dd>
+<dt><code>\textquoteleft <span class="roman">(or <code>`</code>)</span></code>
+<a name="index-_005ctextquoteleft-_0028or-_0060_0029" class="anchor"></a>
+</dt>
+<dd><a name="index-left-quote_002c-single" class="anchor"></a>
+<a name="index-single-left-quote" class="anchor"></a>
+<p>&lsquo; Single left quote.
+</p>
+</dd>
+<dt><code>\textquoteright <span class="roman">(or <code>'</code>)</span></code>
+<a name="index-_005ctextquoteright-_0028or-_0027_0029" class="anchor"></a>
+</dt>
+<dd><a name="index-right-quote_002c-single" class="anchor"></a>
+<a name="index-single-right-quote" class="anchor"></a>
+<p>&rsquo; Single right quote.
+</p>
+</dd>
+<dt><code>\textquotesingle</code>
+<a name="index-_005ctextquotesingle" class="anchor"></a>
+</dt>
+<dd><a name="index-quote_002c-single-straight" class="anchor"></a>
+<a name="index-straight-single-quote" class="anchor"></a>
+<a name="index-single-quote_002c-straight" class="anchor"></a>
+<p>&#x0027; Straight single quote.  (From TS1 encoding.)  
+</p>
+</dd>
+<dt><code>\textquotestraightbase</code>
+<a name="index-_005ctextquotestraightbase" class="anchor"></a>
+</dt>
+<dt><code>\textquotestraightdblbase</code>
+<a name="index-_005ctextquotestraightdblbase" class="anchor"></a>
+</dt>
+<dd><a name="index-quote_002c-straight-base" class="anchor"></a>
+<a name="index-straight-quote_002c-base" class="anchor"></a>
+<a name="index-double-quote_002c-straight-base" class="anchor"></a>
+<a name="index-straight-double-quote_002c-base" class="anchor"></a>
+<p>Single and double straight quotes on the baseline.
+</p>
+</dd>
+<dt><code>\textregistered</code>
+<a name="index-_005ctextregistered" class="anchor"></a>
+</dt>
+<dd><a name="index-registered-symbol" class="anchor"></a>
+<p>&reg; Registered symbol.
+</p>
+</dd>
+<dt><code>\textrightarrow</code>
+<a name="index-_005ctextrightarrow" class="anchor"></a>
+</dt>
+<dd><a name="index-arrow_002c-right_002c-in-text" class="anchor"></a>
+<a name="index-right-arrow_002c-in-text" class="anchor"></a>
+<p>&#x2192; Right arrow.  
+</p>
+</dd>
+<dt><code>\textthreequartersemdash</code>
+<a name="index-_005ctextthreequartersemdash" class="anchor"></a>
+</dt>
+<dd><a name="index-three_002dquarters-em_002ddash" class="anchor"></a>
+<a name="index-em_002ddash_002c-three_002dquarters" class="anchor"></a>
+<p>&#xFE58; &ldquo;Three-quarters&rdquo; em-dash, between en-dash and em-dash.
+</p>
+</dd>
+<dt><code>\texttrademark</code>
+<a name="index-_005ctexttrademark" class="anchor"></a>
+</dt>
+<dd><a name="index-trademark-symbol" class="anchor"></a>
+<p>&#x2122; Trademark symbol.
+</p>
+</dd>
+<dt><code>\texttwelveudash</code>
+<a name="index-_005ctexttwelveudash" class="anchor"></a>
+</dt>
+<dd><a name="index-two_002dthirds-em_002ddash" class="anchor"></a>
+<a name="index-em_002ddash_002c-two_002dthirds" class="anchor"></a>
+<p>&#xFE58; &ldquo;Two-thirds&rdquo; em-dash, between en-dash and em-dash.   
+</p>
+</dd>
+<dt><code>\textunderscore</code>
+<a name="index-_005ctextunderscore" class="anchor"></a>
+</dt>
+<dd><a name="index-underscore_002c-in-text" class="anchor"></a>
+<p>_ Underscore.
+</p>
+</dd>
+<dt><code>\textvisiblespace</code>
+<a name="index-_005ctextvisiblespace" class="anchor"></a>
+</dt>
+<dd><a name="index-visible-space-symbol_002c-in-text" class="anchor"></a>
+<p>&#x2423; Visible space symbol.  
+</p>
+</dd>
+</dl>
+
+
+<hr>
+<a name="Accents" class="anchor"></a>
+<a name="Accents-1" class="anchor"></a>
+<h3 class="section">Accents</h3>
+
+<a name="index-accents" class="anchor"></a>
+<a name="index-characters_002c-accented" class="anchor"></a>
+<a name="index-letters_002c-accented" class="anchor"></a>
+
+<a name="index-package_002c-babel-2" class="anchor"></a>
+<a name="index-babel-package-2" class="anchor"></a>
+
+<a name="index-package_002c-polyglossia" class="anchor"></a>
+<a name="index-polyglossia-package" class="anchor"></a>
+
+<a name="index-multilingual-support" class="anchor"></a>
+<p>LaTeX has wide support for many of the world&rsquo;s scripts and languages,
+through the <code>babel</code> package and related support if you are using
+pdfLaTeX, or <samp>polyglossia</samp> if you are using XeLaTeX or
+LuaLaTeX.  This section does not cover that support. It only lists
+the core LaTeX commands for creating accented characters.  The
+<code>\capital...</code> commands shown here produce alternative forms for use
+with capital letters.  These are not available with OT1.
+</p>
+<p>Below, to make them easier to find, the accents are all illustrated with
+lowercase &lsquo;<samp>o</samp>&rsquo;.
+</p>
+<a name="index-_005ci-_0028dotless-i_0029" class="anchor"></a>
+<a name="index-dotless-i" class="anchor"></a>
+<p>Note that <code>\i</code> produces a dotless i,
+<a name="index-_005cj-_0028dotless-j_0029" class="anchor"></a>
+<a name="index-dotless-j" class="anchor"></a>
+and <code>\j</code> produces a dotless j.
+These are often used in place of their dotted counterparts when they are
+accented.
+</p>
+<dl compact="compact">
+<dt><code>\&quot;</code></dt>
+<dt><code>\capitaldieresis</code></dt>
+<dd><a name="index-_005c_0022-_0028umlaut-accent_0029" class="anchor"></a>
+<a name="index-_005ccapitaldieresis" class="anchor"></a>
+<a name="index-umlaut-accent" class="anchor"></a>
+<a name="index-dieresis-accent" class="anchor"></a>
+<p>&ouml; Umlaut (dieresis).
+</p>
+</dd>
+<dt><code>\'</code></dt>
+<dt><code>\capitalacute</code></dt>
+<dd><a name="index-_005c_0027-_0028acute-accent_0029" class="anchor"></a>
+<a name="index-_005ccapitalacute" class="anchor"></a>
+<a name="index-acute-accent" class="anchor"></a>
+<p>&oacute; Acute accent.
+</p>
+</dd>
+<dt><code>\.</code></dt>
+<dd><a name="index-_005c_002e-_0028dot_002dover-accent_0029" class="anchor"></a>
+<a name="index-dot-accent" class="anchor"></a>
+<a name="index-dot_002dover-accent" class="anchor"></a>
+<p>&#559;  Dot accent.
+</p>
+</dd>
+<dt><code>\=</code></dt>
+<dt><code>\capitalmacron</code></dt>
+<dd><a name="index-_005c_003d-_0028macron-accent_0029" class="anchor"></a>
+<a name="index-_005ccapitalmacron" class="anchor"></a>
+<a name="index-macron-accent" class="anchor"></a>
+<a name="index-overbar-accent" class="anchor"></a>
+<a name="index-bar_002dover-accent" class="anchor"></a>
+<p>&#333; Macron (overbar) accent.
+</p>
+</dd>
+<dt><code>\^</code></dt>
+<dt><code>\capitalcircumflex</code></dt>
+<dd><a name="index-_005c_005e-_0028circumflex-accent_0029" class="anchor"></a>
+<a name="index-_005ccapitalcircumflex" class="anchor"></a>
+<a name="index-circumflex-accent" class="anchor"></a>
+<a name="index-hat-accent" class="anchor"></a>
+<p>&ocirc; Circumflex (hat) accent.
+</p>
+</dd>
+<dt><code>\`</code></dt>
+<dt><code>\capitalgrave</code></dt>
+<dd><a name="index-_005c_0060-_0028grave-accent_0029" class="anchor"></a>
+<a name="index-_005ccapitalgrave" class="anchor"></a>
+<a name="index-grave-accent" class="anchor"></a>
+<p>&ograve; Grave accent.
+</p>
+</dd>
+<dt><code>\~</code></dt>
+<dt><code>\capitaltilde</code></dt>
+<dd><a name="index-_005c_007e-_0028tilde-accent_0029" class="anchor"></a>
+<a name="index-_005ccapitaltilde" class="anchor"></a>
+<a name="index-tilde-accent" class="anchor"></a>
+<p>&ntilde; Tilde accent.
+</p>
+</dd>
+<dt><code>\b</code></dt>
+<dd><a name="index-_005cb-_0028bar_002dunder-accent_0029" class="anchor"></a>
+<a name="index-bar_002dunder-accent" class="anchor"></a>
+<p>o_ Bar accent underneath.
+</p>
+<a name="index-_005cunderbar" class="anchor"></a>
+<a name="index-underbar" class="anchor"></a>
+<p>Related to this, <code>\underbar{<var>text</var>}</code> produces a bar under
+<var>text</var>.  The argument is always processed in LR mode
+(see <a href="latex2e_17.html#Modes">Modes</a>).  The bar is always a fixed position under the baseline,
+thus crossing through descenders.  See also <code>\underline</code> in
+<a href="latex2e_16.html#Math-miscellany">Math miscellany</a>.
+</p>
+</dd>
+<dt><code>\c</code></dt>
+<dt><code>\capitalcedilla</code></dt>
+<dd><a name="index-_005cc-_0028cedilla-accent_0029" class="anchor"></a>
+<a name="index-_005ccapitalcedilla" class="anchor"></a>
+<a name="index-cedilla-accent" class="anchor"></a>
+<p>&ccedil; Cedilla accent underneath.
+</p>
+</dd>
+<dt><code>\d</code></dt>
+<dt><code>\capitaldotaccent</code></dt>
+<dd><a name="index-_005cd-_0028dot_002dunder-accent_0029" class="anchor"></a>
+<a name="index-_005ccapitaldotaccent" class="anchor"></a>
+<a name="index-dot_002dunder-accent" class="anchor"></a>
+<p>&#7885; Dot accent underneath.
+</p>
+</dd>
+<dt><code>\H</code></dt>
+<dt><code>\capitalhungarumlaut</code></dt>
+<dd><a name="index-_005cH-_0028Hungarian-umlaut-accent_0029" class="anchor"></a>
+<a name="index-_005ccapitalhungarumlaut" class="anchor"></a>
+<a name="index-hungarian-umlaut-accent" class="anchor"></a>
+<p>&#337; Long Hungarian umlaut accent.
+</p>
+</dd>
+<dt><code>\k</code></dt>
+<dt><code>\capitalogonek</code></dt>
+<dd><a name="index-_005ck-_0028ogonek_0029" class="anchor"></a>
+<a name="index-_005ccapitalogonek" class="anchor"></a>
+<a name="index-ogonek" class="anchor"></a>
+<p>&#491; Ogonek.  Not available in the OT1 encoding.
+</p>
+</dd>
+<dt><code>\r</code></dt>
+<dt><code>\capitalring</code></dt>
+<dd><a name="index-_005cr-_0028ring-accent_0029" class="anchor"></a>
+<a name="index-_005ccapitalring" class="anchor"></a>
+<a name="index-ring-accent" class="anchor"></a>
+<p>o* Ring accent.
+</p>
+</dd>
+<dt><code>\t</code></dt>
+<dt><code>\capitaltie</code></dt>
+<dt><code>\newtie</code></dt>
+<dt><code>\capitalnewtie</code></dt>
+<dd><a name="index-_005ct-_0028tie_002dafter-accent_0029" class="anchor"></a>
+<a name="index-_005ccapitaltie" class="anchor"></a>
+<a name="index-_005cnewtie" class="anchor"></a>
+<a name="index-_005ccapitalnewtie" class="anchor"></a>
+<a name="index-tie_002dafter-accent" class="anchor"></a>
+<p>oo[ Tie-after accent.  The <code>\newtie</code> form is centered in
+its box.
+</p>
+</dd>
+<dt><code>\u</code></dt>
+<dt><code>\capitalbreve</code></dt>
+<dd><a name="index-_005cu-_0028breve-accent_0029" class="anchor"></a>
+<a name="index-_005ccapitalbreve" class="anchor"></a>
+<a name="index-breve-accent" class="anchor"></a>
+<p>&#335; Breve accent.
+</p>
+</dd>
+<dt><code>\v</code></dt>
+<dt><code>\capitalcaron</code></dt>
+<dd><a name="index-_005cv-_0028breve-accent_0029" class="anchor"></a>
+<a name="index-_005ccapitalcaron" class="anchor"></a>
+<a name="index-hacek-accent" class="anchor"></a>
+<a name="index-check-accent" class="anchor"></a>
+<a name="index-caron-accent" class="anchor"></a>
+<p>&#466;  H&aacute;&#269;ek (check, caron) accent.
+</p>
+</dd>
+</dl>
+
+
+<hr>
+<a name="Additional-Latin-letters" class="anchor"></a>
+<a name="Additional-Latin-letters-1" class="anchor"></a>
+<h3 class="section">Additional Latin letters</h3>
+
+<a name="Non_002dEnglish-characters" class="anchor"></a><a name="index-Latin-letters_002c-additional" class="anchor"></a>
+<a name="index-letters_002c-additional-Latin" class="anchor"></a>
+<a name="index-extended-Latin" class="anchor"></a>
+<a name="index-special-characters-1" class="anchor"></a>
+<a name="index-non_002dEnglish-characters" class="anchor"></a>
+<a name="index-characters_002c-non_002dEnglish" class="anchor"></a>
+
+<p>Here are the basic LaTeX commands for inserting letters beyond
+A&ndash;Z that extend the Latin alphabet, used primarily in languages other
+than English.
+</p>
+<dl compact="compact">
+<dt><code>\aa</code></dt>
+<dt><code>\AA</code></dt>
+<dd><a name="index-_005caa-_0028aa_0029" class="anchor"></a>
+<a name="index-_005cAA-_0028AA_0029" class="anchor"></a>
+<a name="index-aring" class="anchor"></a>
+<p>&aring; and &Aring;.
+</p>
+</dd>
+<dt><code>\ae</code></dt>
+<dt><code>\AE</code></dt>
+<dd><a name="index-_005cae-_0028ae_0029" class="anchor"></a>
+<a name="index-_005cAE-_0028AE_0029" class="anchor"></a>
+<a name="index-ae-ligature" class="anchor"></a>
+<p>&aelig; and &AElig;.
+</p>
+</dd>
+<dt><code>\dh</code></dt>
+<dt><code>\DH</code></dt>
+<dd><a name="index-_005cdh-_0028d_0029" class="anchor"></a>
+<a name="index-_005cDH-_0028D_0029" class="anchor"></a>
+<a name="index-Icelandic-eth" class="anchor"></a>
+<a name="index-eth_002c-Icelandic-letter" class="anchor"></a>
+<p>Icelandic letter eth: &eth; and &ETH;. Not available with <small>OT1</small>
+encoding, you need the <samp>fontenc</samp> package to select an alternate
+font encoding, such as <small>T1</small>.
+</p>
+</dd>
+<dt><code>\dj</code></dt>
+<dt><code>\DJ</code></dt>
+<dd><a name="index-_005cdj" class="anchor"></a>
+<a name="index-_005cDJ" class="anchor"></a>
+<p>Crossed d and D, a.k.a. capital and small letter d with stroke.  Not
+available with <small>OT1</small> encoding, you need the <samp>fontenc</samp> package to
+select an alternate font encoding, such as <small>T1</small>.
+</p>
+</dd>
+<dt><code>\ij</code></dt>
+<dt><code>\IJ</code></dt>
+<dd><a name="index-_005cij-_0028ij_0029" class="anchor"></a>
+<a name="index-_005cIJ-_0028IJ_0029" class="anchor"></a>
+<a name="index-ij-letter_002c-Dutch" class="anchor"></a>
+<p>ij and IJ (except somewhat closer together than appears here).
+</p>
+</dd>
+<dt><code>\l</code></dt>
+<dt><code>\L</code></dt>
+<dd><a name="index-_005cl-_0028l_0029" class="anchor"></a>
+<a name="index-_005cL-_0028L_0029" class="anchor"></a>
+<a name="index-polish-l" class="anchor"></a>
+<p>&#322; and &#321;.
+</p>
+</dd>
+<dt><code>\ng</code></dt>
+<dt><code>\NG</code></dt>
+<dd><a name="index-_005cng" class="anchor"></a>
+<a name="index-_005cNG" class="anchor"></a>
+<p>Lappish letter eng, also used in phonetics.
+</p>
+</dd>
+<dt><code>\o</code></dt>
+<dt><code>\O</code></dt>
+<dd><a name="index-_005co-_0028o_0029" class="anchor"></a>
+<a name="index-_005cO-_0028O_0029" class="anchor"></a>
+<a name="index-oslash" class="anchor"></a>
+<p>&oslash; and &Oslash;.
+</p>
+</dd>
+<dt><code>\oe</code></dt>
+<dt><code>\OE</code></dt>
+<dd><a name="index-_005coe-_0028oe_0029" class="anchor"></a>
+<a name="index-_005cOE-_0028OE_0029" class="anchor"></a>
+<a name="index-oe-ligature" class="anchor"></a>
+<p>&oelig; and &OElig;.
+</p>
+</dd>
+<dt><code>\ss</code></dt>
+<dt><code>\SS</code></dt>
+<dd><a name="index-_005css-_0028ss_0029" class="anchor"></a>
+<a name="index-_005cSS-_0028SS_0029" class="anchor"></a>
+<a name="index-es_002dzet-German-letter" class="anchor"></a>
+<a name="index-sharp-S-letters" class="anchor"></a>
+<p>&szlig; and SS.
+</p>
+</dd>
+<dt><code>\th</code></dt>
+<dt><code>\TH</code></dt>
+<dd><a name="index-_005cth-_0028th_0029" class="anchor"></a>
+<a name="index-_005cTH-_0028TH_0029" class="anchor"></a>
+<a name="index-Icelandic-thorn" class="anchor"></a>
+<a name="index-thorn_002c-Icelandic-letter" class="anchor"></a>
+<p>Icelandic letter thorn: &thorn; and &THORN;. Not available with <small>OT1</small>
+encoding, you need the <samp>fontenc</samp> package to select an alternate
+font encoding, such as <small>T1</small>.
+</p>
+</dd>
+</dl>
+
+
+<hr>
+<a name="g_t_005crule" class="anchor"></a>
+<a name="g_t_005crule-1" class="anchor"></a>
+<h3 class="section"><code>\rule</code></h3>
+
+<a name="index-_005crule" class="anchor"></a>
+
+<p>Synopsis, one of:
+</p>
+<div class="example">
+<pre class="example">\rule{<var>width</var>}{<var>thickness</var>}
+\rule[<var>raise</var>]{<var>width</var>}{<var>thickness</var>}
+</pre></div>
+
+<p>Produce a <em>rule</em>, a filled-in rectangle.
+</p>
+<a name="index-Halmos-symbol" class="anchor"></a>
+<a name="index-tombstone" class="anchor"></a>
+<p>This produces a rectangular blob, sometimes called a Halmos symbol,
+often used to mark the end of a proof.
+</p>
+<div class="example">
+<pre class="example">\newcommand{\qedsymbol}{\rule{0.4em}{2ex}}
+</pre></div>
+
+<a name="index-package_002c-amsthm-1" class="anchor"></a>
+<a name="index-amsthm-package-1" class="anchor"></a>
+
+<p>The <samp>amsthm</samp> package includes this command, with a somewhat
+different-looking symbol.
+</p>
+<p>The mandatory arguments give the horizontal <var>width</var> and vertical
+<var>thickness</var> of the rectangle.  They are rigid lengths
+(see <a href="latex2e_14.html#Lengths">Lengths</a>).  The optional argument <var>raise</var> is also a rigid
+length, and tells LaTeX how much to raise the rule above the
+baseline, or lower it if the length is negative.
+</p>
+<p>This produces a line, a rectangle that is wide but not tall.
+</p>
+<div class="example">
+<pre class="example">\noindent\rule{\textwidth}{0.4pt}
+</pre></div>
+
+<p>The line is the width of the page and 0.4&nbsp;points tall.  This line
+thickness is common in LaTeX.
+</p>
+<p>A rule that has zero width, or zero thickness, will not show up in the
+output, but can cause LaTeX to change the output around it.
+See <a href="latex2e_19.html#g_t_005cstrut">\strut</a> for examples.
+</p>
+
+<hr>
+<a name="g_t_005ctoday" class="anchor"></a>
+<a name="g_t_005ctoday-1" class="anchor"></a>
+<h3 class="section"><code>\today</code></h3>
+
+<a name="index-_005ctoday" class="anchor"></a>
+<a name="index-date_002c-today_0027s" class="anchor"></a>
+<a name="index-today_0027s-date" class="anchor"></a>
+
+<p>Synopsis:
+</p>
+<div class="example">
+<pre class="example">\today
+</pre></div>
+
+<p>Produce today&rsquo;s date in the format &lsquo;<samp><var>month</var> <var>dd</var>,
+<var>yyyy</var></samp>&rsquo;.  An example of a date in that format is &lsquo;<samp>July 4,
+1976</samp>&rsquo;.
+</p>
+<a name="index-package_002c-babel-3" class="anchor"></a>
+<a name="index-babel-package-3" class="anchor"></a>
+
+<a name="index-package_002c-polyglossia-1" class="anchor"></a>
+<a name="index-polyglossia-package-1" class="anchor"></a>
+
+<p>Multilingual packages such as <samp>babel</samp> or <samp>polyglossia</samp>, or
+classes such as <samp>lettre</samp>, will localize <code>\today</code>. For example,
+the following will output &lsquo;<samp>4 juillet 1976</samp>&rsquo;:
+</p>
+<div class="example">
+<pre class="example">\year=1976 \month=7 \day=4
+\documentclass{minimal}
+\usepackage[french]{babel}
+\begin{document}
+\today
+\end{document}
+</pre></div>
+
+<p><code>\today</code> uses the counters <code>\day</code>, <code>\month</code>, and
+<code>\year</code> (see <a href="latex2e_13.html#g_t_005cday-_0026-_005cmonth-_0026-_005cyear">\day &amp; \month &amp; \year</a>).
+</p>
+<a name="index-package_002c-datetime" class="anchor"></a>
+<a name="index-datetime-package" class="anchor"></a>
+
+<p>A number of package on CTAN work with dates.  One is <samp>datetime</samp> package
+which can produce a wide variety of date formats, including ISO standards.
+</p>
+<p>The date is not updated as the LaTeX process runs, so in principle the
+date could be incorrect by the time the program finishes.
+</p>
+
+
+
+
+</body>
+</html>

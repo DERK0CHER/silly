@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Setzer
+Exec=setzer %F
+Type=Application
+Icon=org.cvfosammmm.Setzer
+Categories=GNOME;GTK;Science;Office;
+Keywords=latex;bibtex;editor;
+MimeType=application/vdn.setzer.session.stzs;text/x-tex;text/x-bibtex;

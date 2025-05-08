@@ -22,7 +22,7 @@ from gi.repository import Gtk
 from gi.repository import Gio
 from gi.repository import GLib
 
-import setzer.dialogs.add_remove_packages.add_remove_packages_viewgtk as view
+import dialogs.add_remove_packages.add_remove_packages_viewgtk as view
 from setzer.app.latex_db import LaTeXDB
 
 import pickle

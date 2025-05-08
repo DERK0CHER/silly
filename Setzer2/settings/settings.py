@@ -22,7 +22,7 @@ from gi.repository import Pango
 import os.path
 import pickle
 
-from setzer.helpers.observable import Observable
+from helpers.observable import Observable
 
 
 class Settings(Observable):

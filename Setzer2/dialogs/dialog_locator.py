@@ -15,24 +15,24 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>
 
-from setzer.dialogs.about.about import AboutDialog
-from setzer.dialogs.add_remove_packages.add_remove_packages import AddRemovePackagesDialog
-from setzer.dialogs.build_save.build_save import BuildSaveDialog
-from setzer.dialogs.building_failed.building_failed import BuildingFailedDialog
-from setzer.dialogs.close_confirmation.close_confirmation import CloseConfirmationDialog
-from setzer.dialogs.document_changed_on_disk.document_changed_on_disk import DocumentChangedOnDiskDialog
-from setzer.dialogs.document_deleted_on_disk.document_deleted_on_disk import DocumentDeletedOnDiskDialog
-from setzer.dialogs.document_wizard.document_wizard import DocumentWizard
-from setzer.dialogs.include_bibtex_file.include_bibtex_file import IncludeBibTeXFile
-from setzer.dialogs.include_latex_file.include_latex_file import IncludeLaTeXFile
-from setzer.dialogs.interpreter_missing.interpreter_missing import InterpreterMissingDialog
-from setzer.dialogs.keyboard_shortcuts.keyboard_shortcuts import KeyboardShortcutsDialog
-from setzer.dialogs.open_document.open_document import OpenDocumentDialog
-from setzer.dialogs.open_session.open_session import OpenSessionDialog
-from setzer.dialogs.preferences.preferences import PreferencesDialog
-from setzer.dialogs.replace_confirmation.replace_confirmation import ReplaceConfirmationDialog
-from setzer.dialogs.save_document.save_document import SaveDocumentDialog
-from setzer.dialogs.save_session.save_session import SaveSessionDialog
+from dialogs.about.about import AboutDialog
+from dialogs.add_remove_packages.add_remove_packages import AddRemovePackagesDialog
+from dialogs.build_save.build_save import BuildSaveDialog
+from dialogs.building_failed.building_failed import BuildingFailedDialog
+from dialogs.close_confirmation.close_confirmation import CloseConfirmationDialog
+from dialogs.document_changed_on_disk.document_changed_on_disk import DocumentChangedOnDiskDialog
+from dialogs.document_deleted_on_disk.document_deleted_on_disk import DocumentDeletedOnDiskDialog
+from dialogs.document_wizard.document_wizard import DocumentWizard
+from dialogs.include_bibtex_file.include_bibtex_file import IncludeBibTeXFile
+from dialogs.include_latex_file.include_latex_file import IncludeLaTeXFile
+from dialogs.interpreter_missing.interpreter_missing import InterpreterMissingDialog
+from dialogs.keyboard_shortcuts.keyboard_shortcuts import KeyboardShortcutsDialog
+from dialogs.open_document.open_document import OpenDocumentDialog
+from dialogs.open_session.open_session import OpenSessionDialog
+from dialogs.preferences.preferences import PreferencesDialog
+from dialogs.replace_confirmation.replace_confirmation import ReplaceConfirmationDialog
+from dialogs.save_document.save_document import SaveDocumentDialog
+from dialogs.save_session.save_session import SaveSessionDialog
 
 
 class DialogLocator():
@@ -63,5 +63,3 @@ class DialogLocator():
     
     def get_dialog(dialog_type):
         return DialogLocator.dialogs[dialog_type]
-
-

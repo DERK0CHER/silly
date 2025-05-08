@@ -20,7 +20,7 @@ gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk
 from gi.repository import Gdk
 
-from setzer.dialogs.helpers.dialog_viewgtk import DialogView
+from dialogs.helpers.dialog_viewgtk import DialogView
 
 
 class Preferences(DialogView):

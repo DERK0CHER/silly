@@ -22,8 +22,8 @@ from gi.repository import GObject
 import os.path, re, time, bibtexparser
 import xml.etree.ElementTree as ET
 
-import setzer.helpers.path as path_helpers
-from setzer.app.service_locator import ServiceLocator
+import helpers.path as path_helpers
+from app.service_locator import ServiceLocator
 
 
 class LaTeXDB():

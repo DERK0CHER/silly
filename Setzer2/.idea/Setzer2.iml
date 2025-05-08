@@ -52,6 +52,31 @@
       <sourceFolder url="file://$MODULE_DIR$/workspace/sidebar/document_structure_page" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/workspace/sidebar/symbols_page" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/workspace/welcome_screen" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/about" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/add_remove_packages" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/build_save" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/building_failed" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/close_confirmation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/document_changed_on_disk" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/document_deleted_on_disk" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/document_wizard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/document_wizard/pages" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/helpers" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/include_bibtex_file" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/include_latex_file" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/interpreter_missing" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/keyboard_shortcuts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/open_document" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/open_session" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/preferences" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/preferences/pages" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/replace_confirmation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/save_document" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dialogs/save_session" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/resources" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/resources/icons" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/resources/language-specs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/resources/themes" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/setzer" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/setzer/app" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/setzer/dialogs" isTestSource="false" />

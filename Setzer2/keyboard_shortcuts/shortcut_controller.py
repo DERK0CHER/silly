@@ -19,7 +19,7 @@ import gi
 gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk
 
-from setzer.app.service_locator import ServiceLocator
+from app.service_locator import ServiceLocator
 
 
 class ShortcutController(Gtk.ShortcutController):
@@ -38,5 +38,3 @@ class ShortcutController(Gtk.ShortcutController):
     def action(self, a, b, callback):
         callback()
         return True
-
-

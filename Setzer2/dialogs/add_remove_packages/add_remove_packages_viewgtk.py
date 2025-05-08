@@ -21,7 +21,7 @@ from gi.repository import Gtk
 
 import os
 
-from setzer.dialogs.helpers.dialog_viewgtk import DialogView
+from dialogs.helpers.dialog_viewgtk import DialogView
 
 
 class AddRemovePackagesDialogView(DialogView):
